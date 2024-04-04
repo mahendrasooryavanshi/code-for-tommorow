@@ -9,22 +9,24 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      // roleId: {
-      //   type: Sequelize.BIGINT,
-      //   references: {
-      //     model: "Roles",
-      //     key: "id",
-      //   },
-      //   field: "role_id",
-      // },
-      // permissionId: {
-      //   type: Sequelize.BIGINT,
-      //   references: {
-      //     model: "Permissions",
-      //     key: "id",
-      //   },
-      //   field: "permission_id",
-      // },
+      roleId: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: {
+          model: "Roles",
+          key: "id",
+        },
+        field: "role_id",
+      },
+      permissionId: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: {
+          model: "Permissions",
+          key: "id",
+        },
+        field: "permission_id",
+      },
       status: {
         type: Sequelize.ENUM("active", "inactive"),
         defaultValue: "active",
@@ -40,9 +42,10 @@ module.exports = {
         field: "updated_at",
       },
       deletedAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE,
         field: "deleted_at",
+        defaultValue: null,
       },
     });
   },

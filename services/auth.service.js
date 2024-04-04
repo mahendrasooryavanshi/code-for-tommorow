@@ -7,7 +7,7 @@ const authService = {
   getUser: async (data) => {
     try {
       return await User.findOne({
-        where: data.where,
+        where: data,
       });
     } catch (error) {
       console.log(error);

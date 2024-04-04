@@ -3,7 +3,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.bulkInsert("permissions", [
+    await queryInterface.bulkInsert("Permissions", [
       {
         id: 1,
         title: "user.read",
@@ -11,7 +11,7 @@ module.exports = {
       },
       {
         id: 2,
-        title: "user.unfollow",
+        title: "user.delete",
         status: "active",
       },
       {
@@ -32,37 +32,32 @@ module.exports = {
       {
         id: 6,
         title: "category.update",
-
         status: "active",
       },
       {
         id: 7,
-        title: "address.write",
-        description: "address_write",
+        title: "service.update",
         status: "active",
       },
       {
         id: 8,
-        title: "post.delete",
-        description: "feed_reel_delete",
+        title: "service.delete",
         status: "active",
       },
       {
         id: 9,
-        title: "post.write",
-        description: "feed_reel_write",
+        title: "service.write",
         status: "active",
       },
       {
         id: 10,
-        title: "post.read",
-        description: "feed_reel_read",
+        title: "service.read",
         status: "active",
       },
     ]);
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.bulkDelete("permissions", null, {});
+    await queryInterface.bulkDelete("Permissions", null, {});
   },
 };

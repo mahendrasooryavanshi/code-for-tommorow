@@ -28,9 +28,10 @@ module.exports = {
         field: "updated_at",
       },
       deletedAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE,
         field: "deleted_at",
+        defaultValue: null,
       },
     });
   },

@@ -9,6 +9,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Role.hasMany(models.Role_Permission, {
+        foreignKey: "roleId",
+        as: "rolePermission",
+      });
     }
   }
   Role.init(
@@ -38,9 +42,10 @@ module.exports = (sequelize, DataTypes) => {
         field: "updated_at",
       },
       deletedAt: {
-        allowNull: false,
+        allowNull: true,
         type: DataTypes.DATE,
         field: "deleted_at",
+        defaultValue: null,
       },
     },
     {

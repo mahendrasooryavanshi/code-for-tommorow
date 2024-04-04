@@ -2,6 +2,7 @@ const authService = require("../services/auth.service");
 const constants = require("../constants/constants.json");
 const bcrypt = require("bcrypt");
 const authMiddleware = require("../middleware/auth.middleware");
+
 const authController = {
   index: async (req, res) => {
     const name = req.body.name ? req.body.name : "";
@@ -11,7 +12,7 @@ const authController = {
     try {
       const where = {
         email: email,
-        deleted_at: null,
+        deletedAt: null,
       };
       const isUser = await authService.getUser(where);
       if (isUser) {
@@ -38,8 +39,9 @@ const authController = {
     try {
       const email = req.body.email ? req.body.email.trim().toLowerCase() : "";
       const password = req.body.password ? req.body.password : "";
-      const where = { email: email, deleted_at: null };
+      const where = { email: email, deletedAt: null };
       const isUser = await authService.getUser(where);
+
       if (!isUser) {
         res.status = constants.NOT_FOUND_CODE;
         response.error = constants.NOT_FOUND;

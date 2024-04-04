@@ -2,20 +2,22 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("Permissions", {
+    await queryInterface.createTable("Categories", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      title: {
+      categoryName: {
         type: Sequelize.STRING,
-        allowNull: true,
+        allowNull: false,
+        field: "category_name",
       },
-      status: {
-        type: Sequelize.ENUM("active", "inactive"),
-        defaultValue: "active",
+      createdBy: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        field: "created_by",
       },
       createdAt: {
         allowNull: false,
@@ -36,6 +38,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("Permissions");
+    await queryInterface.dropTable("Categories");
   },
 };

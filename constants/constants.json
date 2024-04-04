@@ -13,6 +13,7 @@
 
   "SUCCESS_STATUS": "success",
   "SOMTHING_WRONG_CODE": 504,
+  "SOMTHING_WENT_WRONG_ERROR": "Somthing_WRONGE",
   "SOMTHING_WENT_WRONG_MESSAGE": "Somthing went wrong...",
   "NOT_FOUND": "NOT_FOUND",
   "NOT_FOUND_MESSAGE": "User Not Found",
@@ -20,5 +21,8 @@
   "INVALID_PASSWORD": "password is not match try again...",
   "DUPLICATE_ENTRY": "DUPLICATE_ENTRY",
   "DUPLICATE_ENTRY_EMAIL_MSG": "Email is already existed",
-  "SALT_ROUND": 10
+  "SALT_ROUND": 10,
+  "CAT_NOT_FOUND_MESSAGE": "category id  Not Found",
+
+  "secretKey": ""
 }
