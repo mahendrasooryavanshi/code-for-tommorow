@@ -1,0 +1,24 @@
+{
+  "UnauthorizedCode": 401,
+  "invalid_Credentials_ERROR": "Unauthorized",
+  "NotValidCredentials_Code": 403,
+  "NotValidCredentials": "Forbidden",
+  "IS_PASSWORD_CONFIRMPASSWORD": "password and confirm password should match....",
+
+  "DUPLICATE_ENTRY_CODE": 409,
+  "EMAIL_EXISTED": "Email is alredy existed....",
+  "MOBILE_EXISTED": "Mobile is alredy existed....",
+  "STATUS_CODE": 201,
+  "SUCCESS_MSG": "Success",
+
+  "SUCCESS_STATUS": "success",
+  "SOMTHING_WRONG_CODE": 504,
+  "SOMTHING_WENT_WRONG_MESSAGE": "Somthing went wrong...",
+  "NOT_FOUND": "NOT_FOUND",
+  "NOT_FOUND_MESSAGE": "User Not Found",
+  "NOT_FOUND_CODE": 404,
+  "INVALID_PASSWORD": "password is not match try again...",
+  "DUPLICATE_ENTRY": "DUPLICATE_ENTRY",
+  "DUPLICATE_ENTRY_EMAIL_MSG": "Email is already existed",
+  "SALT_ROUND": 10
+}
